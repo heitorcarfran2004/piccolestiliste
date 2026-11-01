@@ -26,6 +26,46 @@
     />
     <!-- RASTREAMENTO (cashflow.mentoriaprocesso.com, 01/11) -->
     <script src="https://cashflow.mentoriaprocesso.com/t/p.js?w=8bf6383c-9940-4837-a9d9-6e3cc6dcce06&o=75eea5ec-187e-41d7-917c-d882bb094dff" data-offer="75eea5ec-187e-41d7-917c-d882bb094dff" data-nowprocket data-no-minify="1" data-no-optimize="1" data-cfasync="false" async></script>
+    <script>
+      // CHECKOUT (Hotmart, € 9,90, 01/11/2026). Todos os botões .ir-checkout leem daqui (com as UTMs da URL).
+      window.CHECKOUT = 'https://pay.hotmart.com/K108285881A?off=pwnrry6z&checkoutMode=10';
+      // BACK REDIRECT: quem tenta sair vai para a oferta de € 5,90 (promo.html). Vazio = desligado.
+      window.LINK_SAIDA = 'promo.html';
+      // Guarda: sem ela, sair rumo ao checkout dispararia o popstate e jogaria a pessoa na saída.
+      window.__indoParaCheckout = false;
+      (function () {
+        if (!window.LINK_SAIDA) return;
+        var url = window.LINK_SAIDA.trim() + (window.LINK_SAIDA.indexOf('?') > 0 ? '&' : '?') + location.search.replace('?', '');
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+        window.addEventListener('popstate', function () {
+          if (window.__indoParaCheckout) return;
+          setTimeout(function () { location.href = url; }, 1);
+        });
+      })();
+      document.addEventListener('DOMContentLoaded', function () {
+        var q = new URLSearchParams(location.search);
+        document.querySelectorAll('.ir-checkout').forEach(function (a) {
+          var u = new URL(window.CHECKOUT);
+          q.forEach(function (v, k) { if (!u.searchParams.has(k)) u.searchParams.set(k, v); });
+          a.href = u.toString();
+          a.addEventListener('click', function () { window.__indoParaCheckout = true; });
+        });
+        // ESTE SELETOR ANDA JUNTO COM O GATEWAY: ao trocar de gateway, trocar o domínio aqui também
+        document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function (a) {
+          a.addEventListener('click', function () { window.__indoParaCheckout = true; });
+        });
+        // âncoras internas por rolagem: "#oferta" não entra no histórico e não dispara a saída por engano
+        document.querySelectorAll('a[href^="#oferta"]').forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            e.preventDefault();
+            var alvo = document.getElementById('oferta');
+            if (alvo) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+      });
+    </script>
     <!-- META PIXEL -->
     <!-- UTMIFY -->
     <style>
@@ -1817,7 +1857,7 @@
                 <span class="price-cents">,90</span>
               </div>
               <div class="payment-note">pagamento unico</div>
-              <a class="btn" href="#CHECKOUT" target="_blank" rel="noreferrer" data-gc-event="checkout">
+              <a class="btn ir-checkout" href="https://pay.hotmart.com/K108285881A?off=pwnrry6z&amp;checkoutMode=10" data-gc-event="checkout">
                 Voglio aprire il suo atelier ora
                 <span class="cta-arrow" aria-hidden="true">arrow_forward</span>
               </a>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Aspetta! Piccole Stiliste a € 5,90</title>
+<meta name="description" content="Condizione unica di questa pagina: i 49 look con i cartamodelli e i 4 bonus a € 5,90.">
+<meta name="theme-color" content="#10265A">
+<link rel="icon" href="assets/favicon.ico">
+
+<!-- ============================================================
+     PÁGINA DE SAÍDA (back redirect da index: window.LINK_SAIDA = 'promo.html'), 01/11/2026.
+     NÃO colocar back redirect aqui: daria loop infinito.
+     Checkout da oferta de saída (€ 5,90, Hotmart): CHECKOUT_SAIDA logo abaixo.
+     Sem cronômetro, sem "restam poucas vagas" e sem depoimento: não seriam verdade.
+     ============================================================ -->
+<script>
+  window.CHECKOUT_SAIDA = 'https://pay.hotmart.com/K108285881A?off=tys9be88&checkoutMode=10';
+</script>
+
+<!-- Cashflow (rastreamento): o mesmo da index -->
+<script src="https://cashflow.mentoriaprocesso.com/t/p.js?w=8bf6383c-9940-4837-a9d9-6e3cc6dcce06&o=75eea5ec-187e-41d7-917c-d882bb094dff" data-offer="75eea5ec-187e-41d7-917c-d882bb094dff" data-nowprocket data-no-minify="1" data-no-optimize="1" data-cfasync="false" async></script>
+
+<style>
+  :root{
+    --navy:#10265A; --navy-esc:#0B1B44; --rosa:#FF2F83; --rosa-esc:#CF0F5B; --teal:#00B7C7;
+    --creme:#FFF8EC; --creme-2:#FFE9D4; --borda:#F3C9B6; --tinta:#14204A; --cinza:#46506F;
+    --sans:"Avenir Next","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+    --serif:Georgia,Cambria,"Times New Roman",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--creme);color:var(--tinta);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block;height:auto}
+  .wrap{width:100%;max-width:620px;margin:0 auto;padding:0 16px}
+
+  .alerta{background:var(--rosa-esc);color:#fff;text-align:center;padding:11px 16px;font-size:clamp(12.5px,3.3vw,14.5px);font-weight:700;letter-spacing:.3px;position:sticky;top:0;z-index:10}
+
+  .topo{background:var(--navy);color:#fff;text-align:center;padding:clamp(30px,6vw,46px) 16px 128px;position:relative}
+  .topo:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--rosa))}
+  .topo h1{font-family:var(--serif);font-weight:700;font-size:clamp(32px,7.4vw,48px);line-height:1.1}
+  .topo h1 span{color:#FF8DBA;font-style:italic}
+  .topo p{color:#C9D3EC;font-size:clamp(15px,3.6vw,17px);max-width:500px;margin:14px auto 0}
+  .topo p b{color:#fff}
+
+  .card{background:#fff;border:1px solid var(--borda);border-radius:22px;box-shadow:0 18px 40px rgba(16,38,90,.14);margin-top:-104px;position:relative;padding:22px 18px 22px;text-align:center}
+  .selo{display:inline-block;background:var(--rosa);color:#fff;font-size:12px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;border-radius:99px;padding:6px 14px;margin-bottom:14px}
+  .prod .capa{width:min(230px,62%);margin:0 auto 14px;border-radius:10px;box-shadow:0 10px 26px rgba(16,38,90,.25)}
+  .prod h2{font-family:var(--serif);font-size:clamp(21px,5vw,26px);line-height:1.2;color:var(--navy)}
+  .de{margin-top:16px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .de s{color:var(--cinza);font-size:18px}
+  .economize{background:#E6F7F9;color:#00747F;font-weight:800;font-size:13px;border-radius:99px;padding:4px 10px}
+  .preco{font-family:var(--serif);font-weight:700;font-size:clamp(54px,14vw,72px);line-height:1;color:var(--rosa-esc);margin-top:6px}
+  .preco small{font-size:.45em;vertical-align:.9em;margin-right:4px}
+  .avista{color:var(--cinza);font-size:14px;margin-top:4px}
+
+  .inclui{list-style:none;text-align:left;margin:20px auto 0;max-width:460px;display:grid;gap:9px}
+  .inclui li{display:flex;gap:10px;font-size:15px}
+  .ck{flex:none;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:13px;font-weight:900;display:grid;place-items:center;margin-top:1px}
+
+  .divisor{border:0;border-top:1px dashed var(--borda);margin:20px 0 16px}
+  .tit-bonus{font-weight:800;color:var(--navy);font-size:15px;margin-bottom:12px}
+  .bonus{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:end}
+  .bonus figure{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .bonus img{border-radius:6px;box-shadow:0 4px 12px rgba(16,38,90,.18)}
+  .bonus figcaption{font-size:11.5px;line-height:1.25;color:var(--cinza);font-weight:600}
+
+  .btn{display:block;margin-top:22px;background:linear-gradient(135deg,var(--rosa),var(--rosa-esc));color:#fff;text-decoration:none;font-weight:900;font-size:clamp(16px,4.4vw,19px);letter-spacing:.3px;padding:17px 14px;border-radius:14px;box-shadow:0 10px 24px rgba(207,15,91,.35)}
+  .selos{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:var(--cinza)}
+  .selos span{display:inline-flex;align-items:center;gap:5px}
+  .selos svg{width:15px;height:15px;color:var(--teal)}
+
+  .garantia{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--borda);border-radius:18px;padding:18px;margin-top:18px}
+  .escudo{flex:none;width:74px;height:84px;background:var(--navy);color:#fff;clip-path:polygon(50% 0,100% 16%,100% 60%,50% 100%,0 60%,0 16%);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+  .escudo b{font-family:var(--serif);font-size:30px}
+  .escudo span{font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  .garantia h3{font-family:var(--serif);color:var(--navy);font-size:19px}
+  .garantia p{font-size:14px;color:var(--cinza)}
+
+  .vitrine{display:flex;gap:10px;margin-top:22px;width:max-content;animation:passa 40s linear infinite}
+  .vitrine figure{width:150px;flex:none}
+  .vitrine img{border-radius:8px;box-shadow:0 6px 16px rgba(16,38,90,.16)}
+  @keyframes passa{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.vitrine{animation:none}}
+  .faixa{overflow:hidden}
+  .legenda{text-align:center;font-size:13px;color:var(--cinza);margin:10px 0 30px}
+
+  footer{text-align:center;font-size:12.5px;color:var(--cinza);padding:22px 16px 36px;border-top:1px solid var(--borda)}
+  footer b{color:var(--navy)}
+</style>
+</head>
+<body>
+
+<div class="alerta">Condizione unica: <b>appare solo in questa pagina</b></div>
+
+<header class="topo">
+  <h1>Aspetta! <span>Non andare via</span></h1>
+  <p>Prima che tu esca, ti lasciamo l’atelier completo <b>a meno</b>. Questo prezzo non compare da nessun’altra parte del sito.</p>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="card">
+      <span class="selo">Offerta esclusiva</span>
+      <div class="prod">
+        <img class="capa" src="assets/promo/capa.webp" width="460" height="650" fetchpriority="high" alt="Copertina di Piccole Stiliste · Collezione 2027">
+        <h2>Piccole Stiliste · Collezione 2027 <span style="white-space:nowrap">+ 4 bonus</span></h2>
+      </div>
+
+      <div class="de">
+        <s>€ 9,90</s>
+        <span class="economize">Risparmi € 4,00</span>
+      </div>
+      <div class="preco"><small>€</small>5,90</div>
+      <p class="avista">pagamento unico · accesso immediato</p>
+
+      <ul class="inclui">
+        <li><span class="ck">✓</span><span><b>49 look per bambole fashion da 29 cm</b>, per primavera, estate, autunno e inverno</span></li>
+        <li><span class="ck">✓</span><span>Il cartamodello di ogni look in scala reale, pronto da stampare</span></li>
+        <li><span class="ck">✓</span><span>Tessuti consigliati e varianti di ogni look</span></li>
+        <li><span class="ck">✓</span><span>PDF da stampare e accesso dall’app</span></li>
+        <li><span class="ck">✓</span><span>Accesso a vita</span></li>
+      </ul>
+
+      <hr class="divisor">
+      <div class="tit-bonus">I 4 bonus restano inclusi</div>
+      <div class="bonus">
+        <figure><img src="assets/promo/b1.webp" width="180" height="254" alt="" loading="lazy"><figcaption>Mappa della Moda</figcaption></figure>
+        <figure><img src="assets/promo/b2.webp" width="254" height="180" alt="" loading="lazy"><figcaption>Quaderno di disegno</figcaption></figure>
+        <figure><img src="assets/promo/b3.webp" width="180" height="254" alt="" loading="lazy"><figcaption>Attestato</figcaption></figure>
+        <figure><img src="assets/promo/b4.webp" width="180" height="254" alt="" loading="lazy"><figcaption>Scatola da cucito</figcaption></figure>
+      </div>
+
+      <!-- link vem de CHECKOUT_SAIDA no <head>; as UTMs da URL são repassadas pelo script do fim -->
+      <a class="btn ir-checkout" href="https://pay.hotmart.com/K108285881A?off=tys9be88&amp;checkoutMode=10">VOGLIO TUTTO A € 5,90</a>
+
+      <div class="selos">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Acquisto sicuro</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 5 6v6c0 4.5 3 7.7 7 9 4-1.3 7-4.5 7-9V6l-7-3Z"/></svg>Garanzia di 7 giorni</span>
+        <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2.5 4.5 13.5H12l-1 8 8.5-11H12l1-8Z"/></svg>Accesso immediato</span>
+      </div>
+    </section>
+
+    <section class="garantia">
+      <div class="escudo"><b>7</b><span>giorni</span></div>
+      <div>
+        <h3>Garanzia di 7 giorni</h3>
+        <p>Se entro 7 giorni senti che il materiale non fa per te, puoi chiedere il rimborso, secondo le regole della piattaforma di pagamento.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="faixa">
+    <div class="vitrine">
+      <figure><img src="assets/promo/p020.webp" width="340" height="480" alt="Pagina del look Abito corto con balza" loading="lazy"></figure>
+      <figure><img src="assets/promo/p021.webp" width="340" height="480" alt="Cartamodello dell’Abito corto con balza" loading="lazy"></figure>
+      <figure><img src="assets/promo/p058.webp" width="340" height="480" alt="Pagina del look Abito vichy con spalle scoperte" loading="lazy"></figure>
+      <figure><img src="assets/promo/p059.webp" width="340" height="480" alt="Cartamodello dell’Abito vichy con spalle scoperte" loading="lazy"></figure>
+      <figure><img src="assets/promo/p074.webp" width="340" height="480" alt="Pagina del look Abito con schiena scoperta" loading="lazy"></figure>
+      <figure><img src="assets/promo/p075.webp" width="340" height="480" alt="Cartamodello dell’Abito con schiena scoperta" loading="lazy"></figure>
+      <figure aria-hidden="true"><img src="assets/promo/p020.webp" width="340" height="480" alt="" loading="lazy"></figure>
+      <figure aria-hidden="true"><img src="assets/promo/p021.webp" width="340" height="480" alt="" loading="lazy"></figure>
+      <figure aria-hidden="true"><img src="assets/promo/p058.webp" width="340" height="480" alt="" loading="lazy"></figure>
+      <figure aria-hidden="true"><img src="assets/promo/p059.webp" width="340" height="480" alt="" loading="lazy"></figure>
+      <figure aria-hidden="true"><img src="assets/promo/p074.webp" width="340" height="480" alt="" loading="lazy"></figure>
+      <figure aria-hidden="true"><img src="assets/promo/p075.webp" width="340" height="480" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+  <p class="legenda">Pagine reali del materiale: il look e il suo cartamodello</p>
+</main>
+
+<footer>
+  <b>Piccole Stiliste</b><br>
+  Materiale digitale per uso personale. La riproduzione o la rivendita dei file non è autorizzata.
+</footer>
+
+<script>
+  // Botão de compra: link do CHECKOUT_SAIDA + as UTMs/parâmetros que vieram na URL
+  // (a index manda para cá com a query dela). Não duplica parâmetro que o link já tenha.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    document.querySelectorAll('.ir-checkout').forEach(function (a) {
+      var u = new URL(window.CHECKOUT_SAIDA);
+      q.forEach(function (v, k) { if (!u.searchParams.has(k)) u.searchParams.set(k, v); });
+      a.href = u.toString();
+    });
+  })();
+</script>
+</body>
+</html>
